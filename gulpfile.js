@@ -15,7 +15,10 @@ function html() {
     }))
     .pipe(dest('dist'))
 }
-
+function js() {
+  return src('./js/**.js')
+          .pipe(dest('dist/js'))
+}
 function icons() {
   return src('./scss/fonts/*.+(eot|svg|ttf|woff)')
           .pipe(dest('dist/css/fonts'))
@@ -42,8 +45,9 @@ function serve() {
   browserSync.init({
     server: './dist'
   })
+  watch('./js/**.js', series(js)).on('change', browserSync.reload);
   watch('./**.html', series(html)).on('change', browserSync.reload);
   watch('./sass/**/*.scss', series(scss)).on('change', browserSync.reload);
 }
 
-exports.serve = series(clear, images,scss, icons,html ,serve);
+exports.serve = series(clear, images,scss,js, icons,html ,serve);

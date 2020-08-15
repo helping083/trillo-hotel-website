@@ -2,3 +2,13 @@
   display: flex;
   align-items: center;
 }
+
+@mixin columnDirection {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin iconSize($size) {
+  width: $size;
+  height: $size;
+}
