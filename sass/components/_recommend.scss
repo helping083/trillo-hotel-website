@@ -1,0 +1,25 @@
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  @include centerCrossAxis;
+  
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+     
+  }
+  
+  &__photo {
+    box-sizing: content-box;
+    @include iconSize(4rem);
+    border: 3px solid #fff;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
