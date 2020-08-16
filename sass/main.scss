@@ -1,3 +1,4 @@
+@import "abstracts/animations";
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
@@ -10,8 +11,10 @@
 @import "layouts/content";
 @import "layouts/sidebar";
 @import "layouts/container";
+@import "layouts/overview";
 
 @import "components/logo";
 @import "components/search-box";
 @import "components/user-nav";
 @import "components/side-nav";
+@import "components/gallery";

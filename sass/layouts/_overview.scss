@@ -1,0 +1,89 @@
+.overview {
+  @include centerCrossAxis;
+  border-bottom: 1px solid var(--color-grey-light-2);
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    @include iconSize(1.75rem);
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    @include centerCrossAxis;
+  }
+
+  &__icon-star {
+    margin-right: 1rem;
+  }
+
+  &__icon-star:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+    transform-origin: center;
+  }
+
+  &__icon-location {
+    margin-right: .5rem;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: white;
+    padding: 0 2.25rem;
+    align-self: stretch;
+    @include centerCrossAxis;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__rating-count {
+    font-size: .8rem;
+    text-transform: uppercase;
+  }
+
+  &__rating-average {
+    font-size: 2rem ;
+    font-weight: 300;
+    margin-bottom: -3px;
+  }
+}
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  //take a look
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
